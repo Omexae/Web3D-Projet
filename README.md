@@ -10,4 +10,4 @@ Once nginx is running, open your browser at the adress ```localhost```.
 Click on the door after the scene loaded to get further instructions.
 
 ## Deliverables
-Please open the Rapport.md file to read our report on this project.
+Please open the Rapport.pdf file to read our report on this project.
