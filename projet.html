@@ -16,13 +16,30 @@
         </a> output created with 
         <a href='http://www.instantreality.org'>InstantReality
         </a> aopt tool. 
+      </div>
+      <div>
+        <label for="viewpoints">Select viewpoint:</label>
+        <select id="viewpoints" onchange="changeViewpoint()">
+          <option value="View1">Extérieur</option>
+          <option value="View2">Entrée</option>
+          <option value="View3">Salon</option>
+          <option value="View4">Cuisine</option>
+          <option value="View5">Chambre 1</option>
+          <option value="View6">Chambre 2</option>
+          <option value="View7">Salle de bain</option>
+        </select>
       </div> 
     </div>
     <x3d id='x3dElement' showStat='false' showLog='false' style='width:100%; height:100%; border:0; margin:0; padding:0;'>
       <scene DEF='scene'>
-        <viewpoint DEF='View1' description='Camera' orientation='0.57872 -0.53978 -0.61133 1.93699' position='-188.02850 -18.84146 28.67124' fieldOfView='1.65546'></viewpoint>
-        <navigationinfo type="walk" id="navType" headlight="true" typeparams="-0.4,60,0.05,2.8" explorationmode="all" avatarsize="0.25,1.6,0.75" walkdamping="2" speed="10" transitiontime="1" transitiontype="LINEAR "></navigationinfo>
-        <shape DEF='_G_1'>
+        <Viewpoint DEF="Depart" id="View1" description='Viewpoint 1' position="-115.40086 -162.16360 80.94690" orientation="0.55655 -0.55566 -0.61764 2.01805" zNear="0.06655" zFar="665.48712" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="1.65546"></Viewpoint>
+        <Viewpoint DEF="Entree" id="View2" description='Viewpoint 2' position="2.78474 -165.75836 53.05134" orientation="0.53410 -0.58016 -0.61494 2.07550" zNear="0.06655" zFar="665.48712" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="1.65546"></Viewpoint>
+        <Viewpoint DEF="Salon" id="View3" description='Viewpoint 3' position="254.50355 -183.19961 79.71216" orientation="0.54085 0.58545 0.60393 2.21540" zNear="0.06655" zFar="665.48712" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="1.65546" ></Viewpoint>
+        <Viewpoint DEF="Cuisine" id="View4" description='Viewpoint 4' position="168.90237 -229.48283 58.05183" orientation="-0.52892 0.58191 0.61775 4.02830" zNear="0.06655" zFar="665.48712" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="1.65546"></Viewpoint>
+        <Viewpoint DEF="Chambre1" id="View5" description='Viewpoint 5' position="116.25205 -96.93814 44.92828" orientation="0.51974 0.45795 0.72121 1.88659" zNear="0.06655" zFar="665.48712" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="1.65546"></Viewpoint>
+        <Viewpoint DEF="Chambre2" id="View6" description='Viewpoint 6' position="244.54607 -64.73358 44.91252" orientation="0.59566 -0.53630 -0.59797 2.03905" zNear="0.06655" zFar="665.48712" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="1.65546"></Viewpoint>
+        <Viewpoint DEF="SalleDeBains" id="View7" description='Viewpoint 7' position="172.69127 -73.61906 50.01417" orientation="0.99842 -0.04088 -0.03864 1.39329" zNear="0.06655" zFar="665.48712" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="1.65546"></Viewpoint>
+        <shape DEF='_G_1' onclick="alert('REF 135/Rubriques Cuisine');">
           <appearance DEF='TEX__29'>
             <material></material>
             <imageTexture url='"_29.jpg"'></imageTexture>
@@ -36,7 +53,7 @@
           </appearance>
           <binaryGeometry DEF='BG_60' vertexCount='9207' primType='"TRIANGLES"' position='219.633499146 -82.1927719116 39.0319747925' size='169.787017822 161.047958374 66.806060791' coord='binGeo/BG_60_coordBinary.bin+8' normal='binGeo/BG_60_normalBinary.bin+4' texCoord='binGeo/BG_60_texCoordBinary.bin+4' coordType='Int16' normalType='Int8' texCoordType='Uint16'></binaryGeometry>
         </shape>
-        <shape DEF='_G_3'>
+        <shape DEF='_G_3' onclick="alert('REF 10/Rubriques Baignoire/Douche');">
           <appearance DEF='TEX_PDM_Tiles_44'>
             <material></material>
             <imageTexture url='"PDM_Tiles_44.jpg"'></imageTexture>
@@ -50,7 +67,7 @@
           </appearance>
           <binaryGeometry DEF='BG_51' vertexCount='36' primType='"TRIANGLES"' position='183.285583496 -17.4303207397 9.231508255' size='207.35925293 4.16896438599 0.829016685486' coord='binGeo/BG_51_coordBinary.bin+8' normal='binGeo/BG_51_normalBinary.bin+4' texCoord='binGeo/BG_51_texCoordBinary.bin+4' coordType='Int16' normalType='Int8' texCoordType='Uint16'></binaryGeometry>
         </shape>
-        <shape DEF='_G_5'>
+        <shape DEF='_G_5' onclick="alert('REF 10/Rubriques Baignoire/Douche');">
           <appearance DEF='COL_PDM_Shower_stall_02_glass_thin_01'>
             <material></material>
           </appearance>
@@ -82,7 +99,7 @@
           </appearance>
           <binaryGeometry DEF='BG_50' vertexCount='144' primType='"TRIANGLES"' position='-102.010002136 15.0856237411 1.04550004005' size='10.1352539063 16.2197589874 1.08299994469' coord='binGeo/BG_50_coordBinary.bin+8' normal='binGeo/BG_50_normalBinary.bin+4' coordType='Int16' normalType='Int8'></binaryGeometry>
         </shape>
-        <shape DEF='_G_10'>
+        <shape DEF='_G_10' onclick="alert('REF 40/Rubriques Lits');">
           <appearance DEF='TEX_Texture_1_jpeg'>
             <material></material>
             <imageTexture url='"Texture_1_jpeg.jpg"'></imageTexture>
@@ -113,14 +130,14 @@
           </appearance>
           <binaryGeometry DEF='BG_31' vertexCount='168' primType='"TRIANGLES"' position='216.393936157 -23.812953949 1' size='36.0001220703 48.0000915527 2' coord='binGeo/BG_31_coordBinary.bin+8' normal='binGeo/BG_31_normalBinary.bin+4' coordType='Int16' normalType='Int8'></binaryGeometry>
         </shape>
-        <shape DEF='_G_15'>
+        <shape DEF='_G_15' onclick="alert('REF 47/Rubriques Salle de bain');">
           <appearance DEF='TEX_meuble_de_salle_de_bain_1_vasque_3_tiroirs_en_manguier_massif_trocadero_500_9_6_165810_1'>
             <material></material>
             <imageTexture url='"meuble_de_salle_de_bain_1_vasque_3_tiroirs_en_manguier_massif_trocadero_500_9_6_165810_1.jpg"'></imageTexture>
           </appearance>
           <binaryGeometry DEF='BG_30' vertexCount='1440' primType='"TRIANGLES"' position='174.782012939 -7.90849971771 17.3391990662' size='26.0240020752 17.7310009003 34.6777915955' coord='binGeo/BG_30_coordBinary.bin+8' normal='binGeo/BG_30_normalBinary.bin+4' texCoord='binGeo/BG_30_texCoordBinary.bin+4' coordType='Int16' normalType='Int8' texCoordType='Uint16'></binaryGeometry>
         </shape>
-        <shape DEF='_G_16'>
+        <shape DEF='_G_16' onclick="alert('REF 135/Rubriques Cuisine');">
           <appearance DEF='COL_PDM_Books_05_black'>
             <material diffuseColor='0 0 0'></material>
           </appearance>
@@ -190,7 +207,7 @@
           </appearance>
           <binaryGeometry DEF='BG_6' vertexCount='48' primType='"TRIANGLES"' position='182.455200195 -13.4572324753 8.28151035309' size='209.017227173 11.9077205658 0.829021453857' coord='binGeo/BG_6_coordBinary.bin+8' normal='binGeo/BG_6_normalBinary.bin+4' texCoord='binGeo/BG_6_texCoordBinary.bin+4' coordType='Int16' normalType='Int8' texCoordType='Uint16'></binaryGeometry>
         </shape>
-        <shape DEF='_G_27'>
+        <shape DEF='_G_27' onclick="alert('REF 135/Rubriques Cuisine');">
           <appearance DEF='COL_ForegroundColor'>
             <material diffuseColor='0 0 0'></material>
           </appearance>
@@ -242,7 +259,7 @@
           <binaryGeometry DEF='BG_26' vertexCount='162' primType='"TRIANGLES"' position='66.6510009766 -354.330505371 66' size='59.5980148315 2.48724365234 33.5240020752' coord='binGeo/BG_26_coordBinary.bin+8' normal='binGeo/BG_26_normalBinary.bin+4' coordType='Int16' normalType='Int8'></binaryGeometry>
         </shape>
         <group>
-          <shape DEF='_G_35'>
+          <shape DEF='_G_35' onclick="alert('REF 184/Rubriques Canapés');">
             <appearance DEF='TEX_zone1'>
               <material></material>
               <imageTexture url='"zone1.jpg"'></imageTexture>
@@ -260,21 +277,21 @@
           </appearance>
           <binaryGeometry DEF='BG_20' vertexCount='6144' primType='"TRIANGLES"' position='66.4000015259 -279.51550293 8.82549762726' size='47.2579994202 19.699005127 17.8150062561' coord='binGeo/BG_20_coordBinary.bin+8' normal='binGeo/BG_20_normalBinary.bin+4' coordType='Int16' normalType='Int8'></binaryGeometry>
         </shape>
-        <shape DEF='_G_38'>
+        <shape DEF='_G_38' onclick="alert('REF 4/Rubriques Télévision');">
           <appearance DEF='TEX__23'>
             <material></material>
             <imageTexture url='"_23.jpg"'></imageTexture>
           </appearance>
           <binaryGeometry DEF='BG_24' vertexCount='6' primType='"TRIANGLES"' position='66.6509933472 -353.708984375 66' size='57.1120109558 0.000213623046875 31.0379981995' coord='binGeo/BG_24_coordBinary.bin+8' normal='binGeo/BG_24_normalBinary.bin+4' texCoord='binGeo/BG_24_texCoordBinary.bin+4' coordType='Int16' normalType='Int8' texCoordType='Uint16'></binaryGeometry>
         </shape>
-        <shape DEF='_G_39'>
+        <shape DEF='_G_39' onclick="alert('REF 135/Rubriques Cuisine');">
           <appearance DEF='COL_0133_Gray'>
             <material diffuseColor='0.502 0.502 0.502'></material>
           </appearance>
           <binaryGeometry DEF='BG_21' vertexCount='6906' primType='"TRIANGLES"' position='277.401550293 -150.568634033 38.7789993286' size='86.2990722656 25.5462341309 79.1340026855' coord='binGeo/BG_21_coordBinary.bin+8' normal='binGeo/BG_21_normalBinary.bin+4' coordType='Int16' normalType='Int8'></binaryGeometry>
         </shape>
         <shape DEF='_G_40'>
-          <appearance DEF='TEX_noyer_amerique'>
+          <appearance DEF='TEX_noyer_amerique' onclick="alert('REF 156/Rubriques Salon');">
             <material></material>
             <imageTexture url='"noyer_amerique.jpg"'></imageTexture>
           </appearance>
@@ -287,14 +304,14 @@
           <binaryGeometry DEF='BG_9' vertexCount='1014' primType='"TRIANGLES"' position='275.547546387 -150.256011963 39.0744972229' size='82.5910339355 24.921005249 78.1489944458' coord='binGeo/BG_9_coordBinary.bin+8' normal='binGeo/BG_9_normalBinary.bin+4' coordType='Int16' normalType='Int8'></binaryGeometry>
         </shape>
         <group>
-          <shape DEF='_G_42'>
+          <shape DEF='_G_42' onclick="alert('REF 184/Rubriques Canapés');">
             <appearance DEF='TEX_zone2'>
               <material></material>
               <imageTexture url='"zone2.jpg"'></imageTexture>
             </appearance>
             <binaryGeometry DEF='BG_27' vertexCount='66072' primType='"TRIANGLES"' position='100.062667847 -247.278076172 24.4457206726' size='139.15133667 77.2646636963 22.5176925659' coord='binGeo/BG_27_coordBinary.bin+8' normal='binGeo/BG_27_normalBinary.bin+4' texCoord='binGeo/BG_27_texCoordBinary.bin+4' coordType='Int16' normalType='Int8' texCoordType='Uint16'></binaryGeometry>
           </shape>
-          <shape DEF='_G_43'>
+          <shape DEF='_G_43' onclick="alert('REF 184/Rubriques Canapés');">
             <appearance USE='TEX_zone2'></appearance>
             <binaryGeometry DEF='BG_10' vertexCount='53832' primType='"TRIANGLES"' position='152.578018188 -286.459960938 24.4467201233' size='34.1203918457 65.0000915527 22.5176925659' coord='binGeo/BG_10_coordBinary.bin+8' normal='binGeo/BG_10_normalBinary.bin+4' texCoord='binGeo/BG_10_texCoordBinary.bin+4' coordType='Int16' normalType='Int8' texCoordType='Uint16'></binaryGeometry>
           </shape>
@@ -325,7 +342,7 @@
           </appearance>
           <binaryGeometry DEF='BG_13' vertexCount='216' primType='"TRIANGLES"' position='275.669067383 -149.606170654 34.2519989014' size='1.37802124023 2.5590057373 0.787998199463' coord='binGeo/BG_13_coordBinary.bin+8' normal='binGeo/BG_13_normalBinary.bin+4' texCoord='binGeo/BG_13_texCoordBinary.bin+4' coordType='Int16' normalType='Int8' texCoordType='Uint16'></binaryGeometry>
         </shape>
-        <shape DEF='_G_48'>
+        <shape DEF='_G_48' onclick="alert('REF 135/Rubriques Cuisine');">
           <appearance DEF='TEX_rockit3d_material_wood_walnut_american_black_satin_darker2'>
             <material></material>
             <imageTexture url='"rockit3d_material_wood_walnut_american_black_satin_darker2.png"'></imageTexture>
@@ -367,20 +384,20 @@
         </shape>
         <group>
           <shape DEF='_G_54'>
-            <appearance DEF='TEX_Porte_d_entr_e' onclick="alert('La porte est ouverte');">
+            <appearance DEF='TEX_Porte_d_entr_e'>
               <material></material>
               <imageTexture url='"Porte_d_entr_e.jpg"'></imageTexture>
             </appearance>
             <binaryGeometry DEF='BG_36' vertexCount='84876' primType='"TRIANGLES"' position='178.149551392 -100.886001587 39.3699989319' size='120.079101563 52.1660232544 78.7399978638' coord='binGeo/BG_36_coordBinary.bin+8' normal='binGeo/BG_36_normalBinary.bin+4' texCoord='binGeo/BG_36_texCoordBinary.bin+4' coordType='Int16' normalType='Int8' texCoordType='Uint16'></binaryGeometry>
           </shape>
         </group>
-        <shape DEF='_G_55' onclick="alert('La porte est ouverte');">
+        <shape DEF='_G_55' onclick="alert('Bienvenue ! Vous pouvez explorer la maison en utilisant le menu déroulant en haut à gauche de l écran. Cliquez sur les éléments de la maison si vous souhaitez obtenir leur référence !');">
           <appearance DEF='COL__30'>
             <material diffuseColor='0.427 0.439 0.439'></material>
           </appearance>
           <binaryGeometry DEF='BG_45' vertexCount='1248' primType='"TRIANGLES"' position='-3.93699979782 -166.535003662 38.4075012207' size='8.66199970245 35.5200042725 76.8150024414' coord='binGeo/BG_45_coordBinary.bin+8' normal='binGeo/BG_45_normalBinary.bin+4' coordType='Int16' normalType='Int8'></binaryGeometry>
         </shape>
-        <shape DEF='_G_56'>
+        <shape DEF='_G_56' onclick="alert('REF 135/Rubriques Cuisine');">
           <appearance DEF='TEX__28'>
             <material></material>
             <imageTexture url='"_28.jpg"'></imageTexture>
@@ -413,7 +430,7 @@
           </appearance>
           <binaryGeometry DEF='BG_38' vertexCount='36' primType='"TRIANGLES"' position='275.17401123 -246.084991455 3' size='102.312011719 216.580001831 0' coord='binGeo/BG_38_coordBinary.bin+8' normal='binGeo/BG_38_normalBinary.bin+4' texCoord='binGeo/BG_38_texCoordBinary.bin+4' coordType='Int16' normalType='Int8' texCoordType='Uint16'></binaryGeometry>
         </shape>
-        <shape DEF='_G_61' onclick="alert('La porte est ouverte');">
+        <shape DEF='_G_61'>
           <appearance DEF='COL__Translucent_Glass_Blue_1'>
             <material diffuseColor='0.392 0.584 0.929'></material>
           </appearance>
@@ -421,5 +438,14 @@
         </shape>
       </scene>
     </x3d>
+    <script>
+      function changeViewpoint() {
+        var viewpoint = document.getElementById("viewpoints").value;
+        var vpNode = document.getElementById(viewpoint);
+        if (vpNode) {
+          vpNode.setAttribute("set_bind", "true");
+        }
+      }
+    </script>
   </body>
 </html>
