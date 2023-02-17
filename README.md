@@ -11,4 +11,4 @@ Click on the door after the scene loaded to get further instructions.
 
 ## Deliverables
 Please open the Rapport.pdf file to read our report on this project.
-You can also a demonstration video named Demo.mp4.
+You can also find a demonstration video named Demo.mp4.
