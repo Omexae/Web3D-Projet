@@ -17,60 +17,11 @@
         <a href='http://www.instantreality.org'>InstantReality
         </a> aopt tool. 
       </div> 
-      <div id='Interaction_Toolbox' style='margin:2px; padding:4px 150px 4px 4px; background-color:rgba(199,202,204,.7); position:absolute; z-index:1000; right:0px; top:0px;'> 
-        <table> 
-          <tr> 
-            <td>Navigation Mode: 
-            </td> 
-            <td> 
-              <select style='float:right;' onchange='document.getElementById(x3dElement&apos).runtime[value]();'> 
-                <option selected='selected' value='examine'>Examine 
-                </option> 
-                <option value='turnTable'>TurnTable 
-                </option> 
-                <option value='lookAt'>LookAt 
-                </option> 
-                <option value='lookAround'>LookAround 
-                </option> 
-                <option value='fly'>Fly 
-                </option> 
-                <option value='freeFly'>FreeFly 
-                </option> 
-                <option value='helicopter'>Helicopter 
-                </option> 
-                <option value='walk'>Walk 
-                </option>  
-                <option value='noNav'>None 
-                </option> 
-              </select> 
-            </td> 
-          </tr> 
-          <tr> 
-            <td>Debug Display: 
-            </td> 
-            <td > 
-              <input type='checkbox' onclick='document.getElementById(x3dElement&apos).runtime.statistics(this.checked);'> 
-              </input> Stats 
-              <input type='checkbox' onclick='document.getElementById(x3dElement&apos).runtime.debug();'> 
-              </input> Log 
-            </td> 
-          </tr> 
-          <tr> 
-            <td> 
-              <button onclick='document.getElementById(x3dElement&apos).runtime.showAll();'> Show Everything 
-              </button> 
-            </td> 
-            <td> 
-              <button onclick='document.getElementById(x3dElement&apos).runtime.resetView();'> Reset View 
-              </button> 
-            </td> 
-          </tr> 
-        </table> 
-      </div> 
     </div>
     <x3d id='x3dElement' showStat='false' showLog='false' style='width:100%; height:100%; border:0; margin:0; padding:0;'>
       <scene DEF='scene'>
-        <viewpoint description='Camera' jump='false' orientation='0.777454 -0.430948 -0.458092 1.7603' position='245.987 -106.9 59.999' fieldOfView='1.65546'></viewpoint>
+        <viewpoint DEF='View1' description='Camera' orientation='0.57872 -0.53978 -0.61133 1.93699' position='-188.02850 -18.84146 28.67124' fieldOfView='1.65546'></viewpoint>
+        <navigationinfo type="walk" id="navType" headlight="true" typeparams="-0.4,60,0.05,2.8" explorationmode="all" avatarsize="0.25,1.6,0.75" walkdamping="2" speed="10" transitiontime="1" transitiontype="LINEAR "></navigationinfo>
         <shape DEF='_G_1'>
           <appearance DEF='TEX__29'>
             <material></material>
@@ -416,14 +367,14 @@
         </shape>
         <group>
           <shape DEF='_G_54'>
-            <appearance DEF='TEX_Porte_d_entr_e'>
+            <appearance DEF='TEX_Porte_d_entr_e' onclick="alert('La porte est ouverte');">
               <material></material>
               <imageTexture url='"Porte_d_entr_e.jpg"'></imageTexture>
             </appearance>
             <binaryGeometry DEF='BG_36' vertexCount='84876' primType='"TRIANGLES"' position='178.149551392 -100.886001587 39.3699989319' size='120.079101563 52.1660232544 78.7399978638' coord='binGeo/BG_36_coordBinary.bin+8' normal='binGeo/BG_36_normalBinary.bin+4' texCoord='binGeo/BG_36_texCoordBinary.bin+4' coordType='Int16' normalType='Int8' texCoordType='Uint16'></binaryGeometry>
           </shape>
         </group>
-        <shape DEF='_G_55'>
+        <shape DEF='_G_55' onclick="alert('La porte est ouverte');">
           <appearance DEF='COL__30'>
             <material diffuseColor='0.427 0.439 0.439'></material>
           </appearance>
@@ -462,7 +413,7 @@
           </appearance>
           <binaryGeometry DEF='BG_38' vertexCount='36' primType='"TRIANGLES"' position='275.17401123 -246.084991455 3' size='102.312011719 216.580001831 0' coord='binGeo/BG_38_coordBinary.bin+8' normal='binGeo/BG_38_normalBinary.bin+4' texCoord='binGeo/BG_38_texCoordBinary.bin+4' coordType='Int16' normalType='Int8' texCoordType='Uint16'></binaryGeometry>
         </shape>
-        <shape DEF='_G_61'>
+        <shape DEF='_G_61' onclick="alert('La porte est ouverte');">
           <appearance DEF='COL__Translucent_Glass_Blue_1'>
             <material diffuseColor='0.392 0.584 0.929'></material>
           </appearance>
